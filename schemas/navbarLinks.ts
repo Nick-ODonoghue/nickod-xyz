@@ -15,5 +15,11 @@ export default {
       type: "string",
       description: "The URL of the link",
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      description: "The order of the links displayed in the navbar",
+    },
   ],
 }

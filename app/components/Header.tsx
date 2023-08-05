@@ -1,5 +1,6 @@
 import Link from "next/link"
 import ThemeButton from "./ThemeButton"
+import Navbar from "./Navbar"
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
         <Link href='/'>
           <h1>NickOD.xyz</h1>
         </Link>
+        <Navbar />
         <ThemeButton />
       </div>
     </>
