@@ -1,4 +1,4 @@
 import navbarLinks from "./navbarLinks"
-import siteData from "./siteData"
+import intro from "./intro"
 
-export const schemaTypes = [siteData, navbarLinks]
+export const schemaTypes = [intro, navbarLinks]

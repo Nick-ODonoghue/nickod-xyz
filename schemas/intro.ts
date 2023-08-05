@@ -1,6 +1,6 @@
 export default {
-  name: "siteData",
-  title: "Site Data",
+  name: "siteIntro",
+  title: "Site Intro",
   type: "document",
   fields: [
     {
@@ -14,6 +14,12 @@ export default {
       title: "Site Author",
       type: "string",
       description: "The author of the site",
+    },
+    {
+      name: "siteAuthorNickname",
+      title: "Site Author Nickname",
+      type: "string",
+      description: "The authors nickname",
     },
     {
       name: "authorBio",
@@ -33,6 +39,17 @@ export default {
               title: "Alternative Text",
             },
           ],
+        },
+      ],
+    },
+    {
+      name: "socialLinks",
+      title: "Social Links",
+      type: "array",
+      description: "The social links of the author",
+      of: [
+        {
+          type: "url",
         },
       ],
     },
