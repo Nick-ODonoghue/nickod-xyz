@@ -26,12 +26,38 @@ export default {
       title: "Tech Stack",
       type: "array",
       description: "The tech stack used in the project",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "tech",
+              title: "Tech",
+              type: "string",
+              description: "The tech used in the project",
+            },
+          ],
+        },
+      ],
     },
     {
-      name: "projectLinks",
-      title: "Project Links",
+      name: "projectLink",
+      title: "Project Link",
       type: "array",
-      description: "The links for the project",
+      description: "The links to the project",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "link",
+              title: "Link",
+              type: "string",
+              description: "The url of the link",
+            },
+          ],
+        },
+      ],
     },
     {
       name: "projectImage",

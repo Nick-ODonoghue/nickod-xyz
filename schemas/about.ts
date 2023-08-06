@@ -44,6 +44,19 @@ export default {
       title: "Role Tech Stack",
       type: "array",
       description: "The tech stack used in the role",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "tech",
+              title: "Tech",
+              type: "string",
+              description: "The tech used in the role",
+            },
+          ],
+        },
+      ],
     },
   ],
 }
