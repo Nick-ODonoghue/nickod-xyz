@@ -15,21 +15,58 @@ export default {
       type: "string",
       description: "The intro of the tools section",
     },
-    // subsection title, with array of words inside it
     {
-      name: "toolsSubsection",
-      title: "Tools Subsection",
+      name: "frontendTools",
+      title: "Frontend Tools",
       type: "array",
-      description: "The subsection of the tools section",
+      description: "The frontend tools you used",
       of: [
         {
           type: "object",
           fields: [
             {
-              name: "subsectionTitle",
-              title: "Subsection Title",
+              name: "tool",
+              title: "Tool Name",
               type: "string",
-              description: "The title of the subsection",
+              description: "The name of the frontend tool",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "backendTools",
+      title: "Backend Tools",
+      type: "array",
+      description: "The backend tools you used",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "tool",
+              title: "Tool Name",
+              type: "string",
+              description: "The name of the backend tool",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "otherTools",
+      title: "Other Tools",
+      type: "array",
+      description: "Other tools you used",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "tool",
+              title: "Tool Name",
+              type: "string",
+              description: "The name of the other tool",
             },
           ],
         },
