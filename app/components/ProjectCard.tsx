@@ -1,27 +1,14 @@
-"use client"
-
 import { groq } from "next-sanity"
 import { client } from "../lib/sanity"
 import { Projects } from "../lib/interface"
-import { useEffect, useState } from "react"
 import Image from "next/image"
 import { urlFor } from "@/app/lib/sanityImageUrl"
 
-async function getData() {
-  const query = groq`*[ _type == "projects"]`
-  const data = await client.fetch(query)
-  return data as Projects[]
+interface ProjectCardProps {
+  data: Projects[]
 }
 
-const ProjectCard: React.FC = () => {
-  const [data, setData] = useState<Projects[] | null>(null)
-
-  useEffect(() => {
-    getData().then(setData)
-  }, [])
-
-  if (!data) return <div>Loading...</div>
-
+export default function Project({ data }: ProjectCardProps) {
   return (
     <>
       {data.map((project) => (
@@ -63,13 +50,5 @@ const ProjectCard: React.FC = () => {
         </div>
       ))}
     </>
-  )
-}
-
-export default function Project() {
-  return (
-    <section>
-      <ProjectCard />
-    </section>
   )
 }
