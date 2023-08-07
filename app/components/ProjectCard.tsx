@@ -1,5 +1,3 @@
-import { groq } from "next-sanity"
-import { client } from "../lib/sanity"
 import { Projects } from "../lib/interface"
 import Image from "next/image"
 import { urlFor } from "@/app/lib/sanityImageUrl"

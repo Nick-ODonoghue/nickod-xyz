@@ -4,12 +4,6 @@ export default {
   type: "document",
   fields: [
     {
-      name: "sectionHeading",
-      title: "Section Heading",
-      type: "string",
-      description: "The heading of the section",
-    },
-    {
       name: "projectTitle",
       title: "Project Title",
       type: "string",
