@@ -1,6 +1,6 @@
 export default {
-  name: "project",
-  title: "Project",
+  name: "projects",
+  title: "Projects",
   type: "document",
   fields: [
     {
@@ -54,6 +54,12 @@ export default {
               title: "Link",
               type: "string",
               description: "The url of the link",
+            },
+            {
+              name: "type",
+              title: "Type",
+              type: "string",
+              description: "The type of link (e.g. 'Live Site', 'Github')",
             },
           ],
         },
