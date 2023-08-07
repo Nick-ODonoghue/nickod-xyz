@@ -14,7 +14,7 @@ export default async function SectionProjects() {
 
   return (
     <>
-      <h2>Projects()</h2>
+      <h2>.projects()</h2>
       <section>
         <ProjectCard data={data} />
       </section>

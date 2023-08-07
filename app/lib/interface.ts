@@ -1,5 +1,3 @@
-import { Image } from "sanity"
-
 export interface NavbarLinks {
   title: string
   href: string
@@ -28,5 +26,15 @@ export interface Projects {
       _type: string
     }
   }
+  _id: string
+}
+
+export interface About {
+  aboutIntro: string
+  roleTitle: string
+  rolePosition: string
+  roleDates: string
+  roleDescription: string
+  roleTechStack: { tech: string }[]
   _id: string
 }

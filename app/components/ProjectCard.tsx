@@ -22,29 +22,23 @@ export default function Project({ data }: ProjectCardProps) {
               <p className='text-white font-medium text-center'>{project.projectOverview}</p>
             </div>
           </div>
-          <div>
-            <h3>{project.projectTitle}</h3>
-          </div>
-          <div>
-            <h4>Tech Stack</h4>
-            <ul>
-              {project.techStack.map((stackItem, index) => (
-                <li key={index}>{stackItem.tech}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4>Links</h4>
-            <ul>
-              {project.projectLink.map((linkItem, index) => (
-                <li key={index}>
-                  <a href={linkItem.link} target='_blank' rel='noreferrer'>
-                    {linkItem.type}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h3>{project.projectTitle}</h3>
+          <h4>Tech Stack</h4>
+          <ul>
+            {project.techStack.map((stackItem, index) => (
+              <li key={index}>{stackItem.tech}</li>
+            ))}
+          </ul>
+          <h4>Links</h4>
+          <ul>
+            {project.projectLink.map((linkItem, index) => (
+              <li key={index}>
+                <a href={linkItem.link} target='_blank' rel='noreferrer'>
+                  {linkItem.type}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       ))}
     </>
