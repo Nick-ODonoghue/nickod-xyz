@@ -6,15 +6,20 @@ import { About } from "../lib/interface"
 async function getData() {
   const query = groq`*[ _type == "about"]`
   const data = await client.fetch(query)
-  return data as About[]
+  return data
 }
 
 export default async function SectionAbout() {
   const data = (await getData()) as About[]
+
+  if (!data) return <div>Loading...</div>
+
   return (
     <>
       <h2>.about()</h2>
-      <CardAbout data={data} />
+      <section>
+        <CardAbout data={data} />
+      </section>
     </>
   )
 }

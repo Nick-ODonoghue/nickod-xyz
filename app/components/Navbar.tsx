@@ -11,6 +11,9 @@ async function getData() {
 
 export default async function Navbar() {
   const data = (await getData()) as NavbarLinks[]
+
+  if (!data) return <div>Loading...</div>
+
   return (
     <>
       <ul className=' flex space-x-10'>

@@ -7,6 +7,8 @@ interface ProjectCardProps {
 }
 
 export default function Project({ data }: ProjectCardProps) {
+  if (!data) return <div>Loading...</div>
+
   return (
     <>
       {data.map((project) => (

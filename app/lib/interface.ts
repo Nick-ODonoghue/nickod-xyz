@@ -38,3 +38,12 @@ export interface About {
   roleTechStack: { tech: string }[]
   _id: string
 }
+
+export interface Tools {
+  sectionHeading: string
+  toolsIntro: string
+  frontendTools: { tool: string }[]
+  backendTools: { tool: string }[]
+  otherTools: { tool: string }[]
+  _id: string
+}

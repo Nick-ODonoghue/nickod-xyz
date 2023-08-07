@@ -26,25 +26,25 @@ const myPortableTextComponent = {
 export default async function Intro() {
   const data = (await getData()) as SiteIntro[]
 
+  if (!data) return <div>Loading...</div>
+
   return (
     <section>
-      <ul>
-        {data.map((item) => (
-          <li key={item._id}>
-            <div>
-              <PortableText value={item.authorBio} components={myPortableTextComponent} />
-            </div>
-            <div className=' flex flex-row'>
-              <Link href={item.socialLinks[0]} target='_blank'>
-                <AiFillLinkedin className='' />
-              </Link>
-              <Link href={item.socialLinks[1]} target='_blank'>
-                <AiFillGithub className='' />
-              </Link>
-            </div>
-          </li>
-        ))}
-      </ul>
+      {data.map((item) => (
+        <div key={item._id}>
+          <div>
+            <PortableText value={item.authorBio} components={myPortableTextComponent} />
+          </div>
+          <div className=' flex flex-row'>
+            <Link href={item.socialLinks[0]} target='_blank'>
+              <AiFillLinkedin className='' />
+            </Link>
+            <Link href={item.socialLinks[1]} target='_blank'>
+              <AiFillGithub className='' />
+            </Link>
+          </div>
+        </div>
+      ))}
     </section>
   )
 }
