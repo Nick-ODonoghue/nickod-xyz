@@ -15,7 +15,7 @@ export default async function SectionProjects() {
   return (
     <>
       {data.map((project) => (
-        <h2>{project.sectionHeading}</h2>
+        <h2 key={project._id}>{project.sectionHeading}</h2>
       ))}
       <section>
         <ProjectCard />
