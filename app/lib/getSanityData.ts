@@ -36,3 +36,15 @@ export async function getFooterData() {
   const data = await client.fetch(query)
   return data
 }
+
+export async function getAllBlogData() {
+  const query = groq`*[_type == "blog"]`
+  const data = await client.fetch(query)
+  return data
+}
+
+export async function getBlog(slug: string) {
+  const query = groq`*[_type == "blog" && slug.current == "${slug}"][0]`
+  const data = await client.fetch(query)
+  return data
+}

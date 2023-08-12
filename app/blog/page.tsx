@@ -1,5 +1,9 @@
-import React from "react"
+import BlogCard from "./components/BlogCard"
 
-export default function blog() {
-  return <div>blog</div>
+export default function Blog() {
+  return (
+    <>
+      <BlogCard />
+    </>
+  )
 }
