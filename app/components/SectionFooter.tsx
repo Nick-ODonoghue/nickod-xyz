@@ -9,7 +9,7 @@ export default async function footer() {
       <footer>
         <ul>
           {footerData.map((footer) => (
-            <li id={footer._id}>
+            <li key={footer._id}>
               <span>
                 {footer.copyRightText}
                 <span>
