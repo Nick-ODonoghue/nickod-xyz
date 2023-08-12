@@ -1,24 +1,17 @@
 import ProjectCard from "./ProjectCard"
-import { groq } from "next-sanity"
-import { client } from "../lib/sanity"
 import { Projects } from "../lib/interface"
-
-async function getData() {
-  const query = groq`*[ _type == "projects"]`
-  const data = await client.fetch(query)
-  return data
-}
+import { getProjectData } from "../lib/getSanityData"
 
 export default async function SectionProjects() {
-  const data = (await getData()) as Projects[]
+  const projectData = (await getProjectData()) as Projects[]
 
-  if (!data) return <div>Loading...</div>
+  if (!projectData) return <div>Loading...</div>
 
   return (
     <>
       <h2>.projects()</h2>
       <section>
-        <ProjectCard data={data} />
+        <ProjectCard projectData={projectData} />
       </section>
     </>
   )

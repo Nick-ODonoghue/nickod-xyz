@@ -1,23 +1,18 @@
 import { groq } from "next-sanity"
 import { client } from "../lib/sanity"
 import { Tools } from "../lib/interface"
-
-async function getData() {
-  const query = groq`*[ _type == "tools"]`
-  const data = await client.fetch(query)
-  return data
-}
+import { getToolsData } from "../lib/getSanityData"
 
 export default async function SectionTools() {
-  const data = (await getData()) as Tools[]
+  const toolsData = (await getToolsData()) as Tools[]
 
-  if (!data) return <div>Loading...</div>
+  if (!toolsData) return <div>Loading...</div>
 
   return (
     <>
       <h2>.tools()</h2>
       <section>
-        {data.map((tool) => (
+        {toolsData.map((tool) => (
           <div key={tool._id}>
             <h3>{tool.toolsIntro}</h3>
             <ul>

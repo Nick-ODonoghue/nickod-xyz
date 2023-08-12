@@ -1,17 +1,10 @@
-import { client } from "../lib/sanity"
-import { groq } from "next-sanity"
 import Link from "next/link"
 import { SiteIntro } from "../lib/interface"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 import { urlFor } from "../lib/sanityImageUrl"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
-
-async function getData() {
-  const query = groq`*[_type == "siteIntro"]`
-  const data = await client.fetch(query)
-  return data
-}
+import { getSiteIntro } from "../lib/getSanityData"
 
 const myPortableTextComponent = {
   types: {
@@ -24,13 +17,13 @@ const myPortableTextComponent = {
 }
 
 export default async function Intro() {
-  const data = (await getData()) as SiteIntro[]
+  const siteIntro = (await getSiteIntro()) as SiteIntro[]
 
-  if (!data) return <div>Loading...</div>
+  if (!siteIntro) return <div>Loading...</div>
 
   return (
     <section>
-      {data.map((item) => (
+      {siteIntro.map((item) => (
         <div key={item._id}>
           <div>
             <PortableText value={item.authorBio} components={myPortableTextComponent} />
