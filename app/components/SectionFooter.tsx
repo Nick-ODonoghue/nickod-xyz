@@ -14,7 +14,9 @@ export default async function footer() {
                 {footer.copyRightText}
                 <span>
                   {footer.footerLinks.map((link) => (
-                    <a href={link.href}> {link.link}</a>
+                    <a key={link.link} href={link.href}>
+                      {link.link}
+                    </a>
                   ))}
                 </span>
               </span>
