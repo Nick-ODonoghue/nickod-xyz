@@ -12,3 +12,9 @@ export async function getNavData() {
   const data = await client.fetch(query)
   return data
 }
+
+export async function getProjectData() {
+  const query = groq`*[ _type == "projects"]`
+  const data = await client.fetch(query)
+  return data
+}

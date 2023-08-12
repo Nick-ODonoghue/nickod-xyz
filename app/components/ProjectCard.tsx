@@ -3,15 +3,15 @@ import Image from "next/image"
 import { urlFor } from "@/app/lib/sanityImageUrl"
 
 interface ProjectCardProps {
-  data: Projects[]
+  projectData: Projects[]
 }
 
-export default function Project({ data }: ProjectCardProps) {
-  if (!data) return <div>Loading...</div>
+export default function Project({ projectData }: ProjectCardProps) {
+  if (!projectData) return <div>Loading...</div>
 
   return (
     <>
-      {data.map((project) => (
+      {projectData.map((project) => (
         <div key={project._id}>
           <div className='relative overflow-hidden rounded-md group mb-2'>
             <Image
