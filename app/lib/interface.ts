@@ -47,3 +47,11 @@ export interface Tools {
   otherTools: { tool: string }[]
   _id: string
 }
+
+export interface Footer {
+  copyRightText: string
+  footerText: string
+  footerLinks: { link: string; href: string }[]
+  footerEmoji: string
+  _id: string
+}
