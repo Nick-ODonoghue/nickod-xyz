@@ -1,13 +1,13 @@
 import { About } from "../lib/interface"
 
 interface CardAboutProps {
-  data: About[]
+  aboutData: About[]
 }
 
-export default function CardAbout({ data }: CardAboutProps) {
+export default function CardAbout({ aboutData }: CardAboutProps) {
   return (
     <>
-      {data.map((about) => (
+      {aboutData.map((about) => (
         <div key={about._id}>
           <h3>{about.roleTitle}</h3>
           <h4>{about.rolePosition}</h4>

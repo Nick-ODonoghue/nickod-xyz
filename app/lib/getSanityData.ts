@@ -18,3 +18,9 @@ export async function getProjectData() {
   const data = await client.fetch(query)
   return data
 }
+
+export async function getAboutData() {
+  const query = groq`*[ _type == "about"]`
+  const data = await client.fetch(query)
+  return data
+}
