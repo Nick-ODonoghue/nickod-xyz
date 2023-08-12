@@ -30,3 +30,9 @@ export async function getToolsData() {
   const data = await client.fetch(query)
   return data
 }
+
+export async function getFooterData() {
+  const query = groq`*[ _type == "footer"]`
+  const data = await client.fetch(query)
+  return data
+}

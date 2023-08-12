@@ -1,5 +1,3 @@
-import { groq } from "next-sanity"
-import { client } from "../lib/sanity"
 import { Tools } from "../lib/interface"
 import { getToolsData } from "../lib/getSanityData"
 

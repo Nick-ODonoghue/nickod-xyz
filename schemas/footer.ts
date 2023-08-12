@@ -4,16 +4,16 @@ export default {
   type: "document",
   fields: [
     {
+      name: "copyRightText",
+      title: "Footer Copyright Symbol",
+      type: "string",
+      description: "Copy right symbol in the footer",
+    },
+    {
       name: "footerText",
       title: "Footer Text",
       type: "string",
-      description: "The text in the footer",
-    },
-    {
-      name: "footerTextBottom",
-      title: "Footer Text Bottom",
-      type: "string",
-      description: "The text at the bottom of your footer",
+      description: "The text of your footer",
     },
     {
       name: "footerLinks",
@@ -25,10 +25,10 @@ export default {
           type: "object",
           fields: [
             {
-              name: "link",
-              title: "Link",
+              name: "linkText",
+              title: "Link Text",
               type: "string",
-              description: "The link in the footer",
+              description: "The link text",
             },
             {
               name: "href",
