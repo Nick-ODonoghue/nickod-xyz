@@ -24,3 +24,9 @@ export async function getAboutData() {
   const data = await client.fetch(query)
   return data
 }
+
+export async function getToolsData() {
+  const query = groq`*[ _type == "tools"]`
+  const data = await client.fetch(query)
+  return data
+}
