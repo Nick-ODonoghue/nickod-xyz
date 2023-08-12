@@ -48,9 +48,9 @@ export default {
           type: "image",
           fields: [
             {
-              type: "text",
               name: "alt",
-              title: "Alt",
+              title: "Alt Text",
+              type: "text",
             },
           ],
         },
