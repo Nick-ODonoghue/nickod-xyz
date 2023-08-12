@@ -1,17 +1,12 @@
-import { client } from "../lib/sanity"
-import { groq } from "next-sanity"
+// import { client } from "../lib/sanity"
+// import { groq } from "next-sanity"
 import Link from "next/link"
 import { SiteIntro } from "../lib/interface"
 import { PortableText } from "@portabletext/react"
 import Image from "next/image"
 import { urlFor } from "../lib/sanityImageUrl"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
-
-async function getData() {
-  const query = groq`*[_type == "siteIntro"]`
-  const data = await client.fetch(query)
-  return data
-}
+import { getData } from "../lib/getSanityData"
 
 const myPortableTextComponent = {
   types: {
