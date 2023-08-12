@@ -55,3 +55,14 @@ export interface Footer {
   footerEmoji: string
   _id: string
 }
+
+export interface Blog {
+  title: string
+  overview: string
+  slug: {
+    current: string
+  }
+  createdAt: string
+  content: any
+  _id: string
+}
