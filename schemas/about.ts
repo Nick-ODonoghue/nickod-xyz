@@ -4,12 +4,6 @@ export default {
   type: "document",
   fields: [
     {
-      name: "aboutIntro",
-      title: "About Intro",
-      type: "string",
-      description: "The intro of the about section",
-    },
-    {
       name: "roleTitle",
       title: "Role Title",
       type: "string",
@@ -26,6 +20,12 @@ export default {
       title: "Role Dates",
       type: "string",
       description: "The dates of the role",
+    },
+    {
+      name: "aboutIntro",
+      title: "About Intro",
+      type: "string",
+      description: "The intro of the about section",
     },
     {
       name: "roleDescription",
