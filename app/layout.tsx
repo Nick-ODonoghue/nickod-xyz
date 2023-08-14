@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ["latin"] })
 const meta = (await getSiteMetadata()) as Metadata
 
 export const metadata = {
+  metadataBase: new URL(meta.siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: meta.title,
     template: "%s | " + meta.title,
@@ -24,7 +28,7 @@ export const metadata = {
     image: meta.ogImage,
   },
   twitter: {
-    card: meta.twitterTitle,
+    card: "summary_large_image",
     title: meta.twitterTitle,
     description: meta.twitterDescription,
     url: meta.twitterUrl,

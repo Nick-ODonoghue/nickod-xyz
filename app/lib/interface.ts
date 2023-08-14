@@ -73,6 +73,7 @@ export interface Metadata {
   title: string
   description: string
   keywords: string[]
+  siteUrl: string
   ogTitle: string
   ogDescription: string
   ogImage: {

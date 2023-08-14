@@ -5,6 +5,29 @@ import { PortableText } from "@portabletext/react"
 import { urlFor } from "@/app/lib/sanityImageUrl"
 import Image from "next/image"
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  try {
+    const blog = (await getBlog(params.slug)) as Blog
+    if (!blog)
+      return {
+        title: "Blog not found",
+        description: "Blog not found",
+      }
+    return {
+      title: blog.title,
+      description: blog.overview,
+      alternates: {
+        canonical: `/blog/${blog.slug.current}`,
+      },
+    }
+  } catch (error) {
+    return {
+      title: "Blog not found",
+      description: "Blog not found",
+    }
+  }
+}
+
 export default async function page({ params }: { params: { slug: string } }) {
   const blog = (await getBlog(params.slug)) as Blog
 

@@ -23,6 +23,12 @@ export default {
       of: [{ type: "string" }],
     },
     {
+      name: "siteUrl",
+      title: "Site URL",
+      type: "url",
+      description: "The URL of your site",
+    },
+    {
       name: "ogTitle",
       title: "Open Graph Title",
       type: "string",
