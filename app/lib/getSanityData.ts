@@ -50,7 +50,7 @@ export async function getBlog(slug: string) {
 }
 
 export async function getSiteMetadata() {
-  const query = groq`*[_type == "metadata"]`
+  const query = groq`*[_type == "metadata"][0]`
   const data = await client.fetch(query)
   return data
 }

@@ -1,15 +1,35 @@
 import "./globals.css"
-import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Providers from "./components/Providers"
+import { getSiteMetadata } from "./lib/getSanityData"
+import { Metadata } from "./lib/interface"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "NickOD.xyz | Freelance Web Developer",
-  description:
-    "NickOD.xyz - Hertford-based freelance web developer, specialising in React, Next.js, JavaScript, Sanity, and WordPress. Offering tailor-made, efficient, and responsive web development services for businesses and individuals.",
+const meta = (await getSiteMetadata()) as Metadata
+
+export const metadata = {
+  title: {
+    default: meta.title,
+    template: "%s | " + meta.title,
+  },
+  description: meta.description,
+  keywords: meta.keywords,
+  openGraph: {
+    title: meta.ogTitle,
+    description: meta.ogDescription,
+    siteName: meta.title,
+    url: meta.ogUrl,
+    image: meta.ogImage,
+  },
+  twitter: {
+    card: meta.twitterTitle,
+    title: meta.twitterTitle,
+    description: meta.twitterDescription,
+    url: meta.twitterUrl,
+    image: meta.twitterImage,
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
