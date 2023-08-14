@@ -68,3 +68,29 @@ export interface Blog {
   content: PortableTextBlock[]
   _id: string
 }
+
+export interface Metadata {
+  title: string
+  description: string
+  keywords: string[]
+  siteUrl: string
+  ogTitle: string
+  ogDescription: string
+  ogImage: {
+    asset: {
+      _ref: string
+      _type: string
+    }
+  }
+  ogUrl: string
+  twitterTitle: string
+  twitterDescription: string
+  twitterImage: {
+    asset: {
+      _ref: string
+      _type: string
+    }
+  }
+  twitterUrl: string
+  _id: string
+}
