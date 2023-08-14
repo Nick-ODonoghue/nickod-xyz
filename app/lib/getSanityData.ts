@@ -48,3 +48,9 @@ export async function getBlog(slug: string) {
   const data = await client.fetch(query)
   return data
 }
+
+export async function getSiteMetadata() {
+  const query = groq`*[_type == "metadata"]`
+  const data = await client.fetch(query)
+  return data
+}
