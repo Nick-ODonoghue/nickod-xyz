@@ -1,3 +1,5 @@
+import { PortableTextBlock } from "sanity"
+
 export interface NavbarLinks {
   title: string
   href: string
@@ -8,7 +10,7 @@ export interface SiteIntro {
   siteTitle: string
   siteAuthor: string
   siteAuthorNickname: string
-  authorBio: any
+  authorBio: PortableTextBlock[]
   siteMetaDataDescription: string
   socialLinks: string
   _id: string
@@ -63,6 +65,6 @@ export interface Blog {
     current: string
   }
   createdAt: string
-  content: any
+  content: PortableTextBlock[]
   _id: string
 }

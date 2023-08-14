@@ -1,7 +1,7 @@
 export default {
   name: "metadata",
   title: "Metadata",
-  type: "object",
+  type: "document",
   fields: [
     {
       name: "title",
