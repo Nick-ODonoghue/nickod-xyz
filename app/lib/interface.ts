@@ -59,6 +59,7 @@ export interface Footer {
 }
 
 export interface Blog {
+  siteAuthor: SiteIntro
   title: string
   overview: string
   slug: {
@@ -66,6 +67,12 @@ export interface Blog {
   }
   createdAt: string
   content: PortableTextBlock[]
+  image: {
+    asset: {
+      _ref: string
+      _type: string
+    }
+  }
   _id: string
 }
 
