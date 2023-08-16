@@ -1,12 +1,15 @@
 import { MetadataRoute } from "next"
+import { getSiteMetadata } from "./lib/getSanityData"
+import { Metadata } from "./lib/interface"
 
-export default function robots(): MetadataRoute.Robots {
+export default async function robots(): Promise<MetadataRoute.Robots> {
+  const url = (await getSiteMetadata()) as Metadata
+
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
     },
-    sitemap: "https://nickod.xyz/sitemap.xml",
+    sitemap: `${url}sitemap.xml`,
   }
 }
