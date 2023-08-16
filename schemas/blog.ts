@@ -56,5 +56,19 @@ export default {
         },
       ],
     },
+    {
+      name: "image",
+      title: "Blog Meta Image",
+      type: "image",
+      description: "The image of the blog for social media",
+      fields: [
+        {
+          name: "alt",
+          title: "Alt Text",
+          type: "string",
+          description: "The alt text of the image",
+        },
+      ],
+    },
   ],
 }
