@@ -10,9 +10,9 @@ export default async function Header() {
 
   return (
     <>
-      <div className=' flex place-content-between'>
+      <div className='py-6 px-3 flex place-content-between sticky top-0 z-50 bg-white/90 dark:bg-black/90 '>
         <Link href='/'>
-          <h1>{siteTitle}</h1>
+          <h2>{siteTitle}</h2>
         </Link>
         <Navbar />
         <ThemeButton />

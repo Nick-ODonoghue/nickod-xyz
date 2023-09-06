@@ -40,11 +40,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-white text-black selection:text-white selection:bg-purple-600 dark:bg-black dark:text-white `}
+        className={`${inter.className} bg-white text-black selection:text-white selection:bg-purple-600 dark:bg-black dark:text-white container mx-auto `}
       >
         <Providers>
           <Header />
-          <main className=''>{children}</main>
+          <main className='px-3 '>{children}</main>
         </Providers>
       </body>
     </html>
