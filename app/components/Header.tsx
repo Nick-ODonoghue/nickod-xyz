@@ -3,6 +3,7 @@ import ThemeButton from "./ThemeButton"
 import Navbar from "./Navbar"
 import { getSiteIntro } from "../lib/getSanityData"
 import { SiteIntro } from "../lib/interface"
+import MobileMenu from "./MobileMenu"
 
 export default async function Header() {
   const data = (await getSiteIntro()) as SiteIntro[]
@@ -16,6 +17,7 @@ export default async function Header() {
         </Link>
         <Navbar />
         <ThemeButton />
+        <MobileMenu />
       </div>
     </>
   )
