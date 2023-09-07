@@ -10,10 +10,10 @@ export default async function SectionTools() {
 
   return (
     <>
-      <h2>.tools()</h2>
       <section>
         {toolsData.map((tool) => (
-          <div key={tool._id}>
+          <div key={tool._id} id={tool.sectionLink}>
+            <h2>{tool.sectionHeading}</h2>
             <h3>{tool.toolsIntro}</h3>
             <ul>
               {tool.frontendTools.map((frontendTool) => (

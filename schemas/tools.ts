@@ -10,6 +10,12 @@ export default {
       description: "The heading of the section",
     },
     {
+      name: "sectionLink",
+      title: "Section Link",
+      type: "string",
+      description: "The link to the section",
+    },
+    {
       name: "toolsIntro",
       title: "Tools Intro",
       type: "string",

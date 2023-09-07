@@ -43,6 +43,7 @@ export interface About {
 
 export interface Tools {
   sectionHeading: string
+  sectionLink: string
   toolsIntro: string
   frontendTools: { tool: string }[]
   backendTools: { tool: string }[]
